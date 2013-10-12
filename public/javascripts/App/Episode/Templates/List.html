@@ -1,0 +1,19 @@
+﻿<ul class="breadcrumb">
+  <li><a href="#shows">Shows</a> <span class="divider">/</span></li>
+  <li><a href="#shows/<%=show._id%>"><%=show.title%></a> <span class="divider">/</span></li>
+  <li class="active">Episodes</li>
+</ul>
+<a href="#shows/<%=show._id%>/episodes/new" class="pull-right btn btn-success">Create Episode</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="models">
+    </tbody>
+</table>

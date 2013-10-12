@@ -1,0 +1,9 @@
+﻿<td><%=episode.title%></td>
+<td><%=episode.description%></td>
+<td><a href="#shows/<%=show._id%>/episodes/<%=episode._id%>" class="btn btn-small">View</a></td>
+<% if(episode.lock) {%>
+<td><a class="btn btn-small btn-danger">LOCKED</a></td>
+<%} else {%>
+<td><a class="remove btn btn-small btn-danger">Delete</a></td>
+<%}%>
+            

@@ -1,0 +1,16 @@
+﻿.field {
+  display: block;
+}
+.editing .lock {
+	display: none;
+}
+input.edit,
+.edit {
+  display: none;
+}
+.editing .field {
+  display: none;
+}
+.editing .edit {
+  display: block;
+}

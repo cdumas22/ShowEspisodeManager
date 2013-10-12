@@ -1,0 +1,27 @@
+//-
+	For development and deploying it is best to use require js
+	once you have built the js you can switch to use the curl code, this will save an extra few kb 
+	on requests
+
+doctype 5
+html(lang="en")
+	head
+		link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+		link(rel="stylesheet", href="/stylesheets/site.css")
+		//-
+		script(data-main="/javascripts/App/Main", src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.6/require.js")
+		//-
+			script
+				var curl = {
+					baseUrl: '/javascripts/App-built',
+					apiName: 'require',
+					paths: {
+						css: "../libraries/css",
+						text: "../libraries/text"
+					}
+				};
+			script(src="//cdnjs.cloudflare.com/ajax/libs/curl/0.7.3/curl/curl.min.js")
+			script
+				require(['/javascripts/App-built/Main']);
+	body
+		div#APP

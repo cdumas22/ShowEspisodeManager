@@ -1,0 +1,27 @@
+﻿<ul class="breadcrumb">
+  <li><a href="#shows">Shows</a> <span class="divider">/</span></li>
+  <li><a href="#shows/<%=show._id%>"><%=show.title%></a> <span class="divider">/</span></li>
+  <li><a href="#shows/<%=show._id%>/episodes">Episodes</a> <span class="divider">/</span></li>
+  <li class="active"><%=episode.title%></li>
+</ul>
+<% if(episode.lock) {%>
+<div class="lock pull-right btn btn-danger">LOCKED</div>
+<% } %>
+<div class="controls">
+    <div class="title">
+        <h1 class="field"><%=episode.title%></h1>
+        <input class="edit" type="text" name="title" value="<%=episode.title%>" placeholder="Title"/>
+    </div>
+    <div>
+        <h3 class="field">SHOW: <%=show.title%></h3>
+        <span class="edit input-xlarge uneditable-input"><%=show.title%></span>
+    </div>
+    <div>
+        <p class="field"><%=episode.description%></p>
+        <input class="edit" type="text" name="description" value="<%=episode.description%>" placeholder="Description" />
+    </div>
+</div>
+<div class="edit form-actions">
+    <button class="save btn btn-primary" type="submit">Save</button>
+    <button class="cancel btn" type="button">cancel</button>
+</div>

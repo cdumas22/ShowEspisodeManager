@@ -1,0 +1,21 @@
+﻿<ul class="breadcrumb">
+  <li><a href="#shows">Shows</a> <span class="divider">/</span></li>
+  <li class="active"><%=title%></li>
+</ul>
+<% if(lock) {%>
+<div class="lock pull-right btn btn-danger">LOCKED</div>
+<% } %>
+<div class="title">
+    <h1 class="field"><%=title%></h1>
+    <input class="edit" type="text" name="title" value="<%=title%>" placeholder="Title"/>
+</div>
+<div>
+    <p class="field"><%=description%></p>
+    <input class="edit" type="text" name="description" value="<%=description%>" placeholder="Description"/>
+</div>
+<div class="edit form-actions">
+    <button class="save btn btn-primary" type="submit">Save</button>
+    <button class="cancel btn" type="button">cancel</button>
+</div>
+
+
